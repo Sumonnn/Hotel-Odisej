@@ -1,0 +1,380 @@
+@font-face {
+    font-family: "pp woodland";
+    src: url(./Fonts/PPWoodland-Ultralight.otf);
+}
+
+@font-face {
+    font-family: "pp woodland bold";
+    src: url(./Fonts/PPWoodland-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ----------------------nav--------------------- */
+nav {
+    width: 100%;
+    height: 12vh;
+    padding: 0 55px;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-part1 {
+    width: 40px;
+    height: 10px;
+}
+
+.nav-part1 .line {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: #434B34;
+}
+
+.nav-part2 button {
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-right: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #434B34;
+    border: 1px solid #434b34d2;
+}
+
+.nav-part2 button:nth-last-child(1) {
+    background-color: #434b34de;
+    color: white;
+}
+
+/* ------------------------p1-------------------------- */
+.page1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.page1 svg {
+    scale: 0.24;
+    position: absolute;
+    top: -14%;
+    z-index: 9;
+    fill: #434B34;
+}
+
+.page1>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* -------------------------p2---------------------------- */
+.page2 {
+    min-height: 150vh;
+    width: 100%;
+    position: relative;
+    background-color: #5B6647;
+}
+
+.page2 #svg1 {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.page2 .text-content {
+    position: relative;
+    padding-top: 12vw;
+    z-index: 99;
+}
+
+.page2 .text-content>h2 {
+    text-align: center;
+    font-size: 4.5vw;
+    line-height: 4.8vw;
+    color: #434B34;
+    font-family: "pp woodland";
+}
+
+.page2 .text-content>h2 span {
+    font-family: "pp woodland";
+}
+
+.page2 #svg2 {
+    position: absolute;
+    bottom: -10%;
+    width: 280vw;
+    fill: #5B6647;
+    z-index: 9;
+}
+
+.page2 #svg3 {
+    position: absolute;
+    bottom: -10%;
+    width: 270vw;
+    fill: #E3E3C4;
+    left: -35%;
+}
+
+/* ---------------------p3---------------------------- */
+.page3 {
+    width: 100%;
+    min-height: 150vh;
+    background-color: #F7F7EE;
+}
+
+.page3 .text-content2 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.page3 .text-content2 h2 {
+    color: #E3E3C4;
+    font-size: 4.2vw;
+    font-family: "pp woodland";
+    font-weight: 900;
+    line-height: 4.5vw;
+}
+
+.page3 .img-feature {
+    width: 85%;
+    height: calc(150vh - 50vh);
+    padding-top: 2vw;
+    margin-left: 7.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page3 .img-feature .img-feature-left {
+    width: 46%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page3 .img-feature .img-feature-left .text-section {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+    justify-content: flex-start;
+}
+
+.page3 .img-feature .img-feature-left .text-section p {
+    width: 53%;
+    font-family: "gilroy";
+    font-weight: 400;
+    line-height: 1.2vw;
+    font-size: 0.9vw;
+    color: #434B34;
+    letter-spacing: -1px;
+}
+
+.page3 .img-feature .img-feature-left .text-section h3 {
+    font-family: "gilroy";
+    font-weight: 500;
+    color: #5B6647;
+    font-size: 1.4vw;
+
+}
+
+.page3 .img-feature .img-feature-left .text-section h3 span i {
+    padding: 0.2vw 0.8vw;
+    background-color: #434B34;
+    border-radius: 15px;
+    color: #E3E3C4;
+}
+
+.page3 .img-feature .img-feature-left .left-img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.page3 .img-feature .img-feature-left .left-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3 .img-feature-right {
+    width: 53%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2vw;
+}
+
+.page3 .img-feature-right .top-right-img {
+    width: 100%;
+    height: 55%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.page3 .img-feature-right .top-right-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3 .img-feature-right .bottom-right-img {
+    width: 32%;
+    height: 38%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.page3 .img-feature-right .bottom-right-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* -----------------------.page4--------------------- */
+.page4 {
+    width: 100%;
+    min-height: 110vh;
+    padding-top: 5vw;
+    background-color: #F7F7EE;
+}
+
+.page4 .cards {
+    width: 90%;
+    height: 20vh;
+    margin-left: 5vw;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid #434b3480;
+    /* background-color: red; */
+}
+
+.page4 .cards:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.page4 .cards:nth-last-child(1) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.page4 .cards .cards-left-img {
+    width: 0%;
+    height: 100%;
+    /* display: none; */
+    transition: ease-out 0.2s;
+    background-color: aqua;
+}
+
+.page4 .cards .cards-left-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page4 .cards .information-feature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.page4 .cards .information-feature .cards-text-feature {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 1.5vw;
+    padding-left: 3vw;
+    justify-content: center;
+    /* background-color: coral; */
+}
+
+.page4 .cards .information-feature .cards-text-feature h2 {
+    font-family: "pp woodland";
+    color: #434B34;
+    font-size: 2vw;
+}
+
+.page4 .cards .information-feature .cards-text-feature p {
+    font-family: "gilroy";
+    font-size: 0.8vw;
+    color: #434B34;
+    /* background-color: aqua; */
+}
+
+.page4 .cards .information-feature .cards-number {
+    margin-right: 3vw;
+    margin-top: 4vw;
+    background-color: #434B34;
+    color: white;
+    padding: 0.2vw 1.3vw;
+    font-family: "gilroy";
+    font-weight: 800;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.8vw;
+}
+.page4 .cards .information-feature .cards-number i{
+    display: none;
+    color: #434B34;
+}
+.page4 .cards:hover .cards-left-img {
+    /* display: block; */
+    width: 35%;
+
+}
+.page4 .cards:hover {
+    background-color: #434B34;
+}
+.page4 .cards:hover .information-feature .cards-text-feature h2{
+    color: #E3E3C4;
+}
+.page4 .cards:hover .information-feature .cards-text-feature p{
+    color: #ffffff;
+}
+.page4 .cards:hover .cards-number{
+    background-color: white;
+}
+.page4 .cards:hover .information-feature .cards-text-feature{
+    width: 34%;
+}
+.page4 .cards:hover .information-feature .cards-number h4{
+   display: none;
+}
+.page4 .cards:hover .information-feature .cards-number i{
+    display: initial;
+}

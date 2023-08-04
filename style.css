@@ -378,3 +378,84 @@ nav {
 .page4 .cards:hover .information-feature .cards-number i{
     display: initial;
 }
+/* ----------------------p5---------------------------- */
+.page5{
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F7EE;
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.5) translateX(-65%) translateY(30%);
+    border-radius: 20px;
+}
+.swiper-slide-active img{
+    transform: scale(0.85) translateX(0%) translateY(0%);
+  
+  }
+
+.swiper-slide {
+    width: 80%;
+}
+
+.swiper-button-next {
+    color: #fff;
+    background-color: #434b34;
+    padding: 5px 20px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10.3%;
+    right: 5%; 
+    z-index: 9;
+}
+.swiper-button-prev{
+    color: #fff;
+    background-color: #434b34;
+    padding: 5px 20px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10.3%;
+    left: 86%;
+    z-index: 9;
+}
+.swiper-pagination{
+    width: 38px;
+    height: 20px;
+    position: absolute;
+    top: 7.5%;
+    left: 89.2%;
+    font-family: "gilroy";
+}
+.swiper-button-next::after {
+    content: "";
+}
+
+.swiper-button-prev::after {
+    content: "";
+}
+
+/* -------------------p6-------------------------- */
+.page6{
+    width: 100%;
+    height: 100vh;
+}

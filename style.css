@@ -518,5 +518,72 @@ nav {
     line-height: 0.8vw;
 }
 .page6 .page6-features{
-      
+      width: 92%;
+      margin-left: 4vw;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* background-color: red; */
+}
+.page6 .page6-features .page6-features-cards{
+    width: 20vw;
+    height: 24vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.page6 .page6-features .page6-features-cards-second{
+  margin-top: 15vw;
+  /* background-color: aqua; */
+}
+.page6 .page6-features .page6-features-cards .page6-card-img{
+    width: 100%;
+    height: 60%;
+    /* background-color: #fff; */
+}
+.page6 .page6-features .page6-features-cards .page6-card-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.page6 .page6-features .page6-features-cards div>h2{
+   font-family: "pp woodland bold";
+   /* width: 110%; */
+   color: #E3E3C4;
+   font-size: 1.8vw;
+   line-height: 3vw;
+}
+.page6 .page6-features .page6-features-cards div>p{
+    font-size: 0.9vw;
+    font-family: "gilroy";
+    line-height: 1vw;
+    color: #F7F7EE;
+}
+.page6 .page6-last-icon{
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* background-color: red; */
+}
+.page6 .page6-last-icon>h2{
+    font-family: "gilroy";
+    font-weight: 500;
+    font-size: 1.3vw;
+    color: #F7F7EE;
+}
+.page6 .page6-last-icon>h2 span i{
+     padding: 0.2vw 0.8vw;
+     margin-left: 1vw;
+     color: #434b34;
+     border-radius: 50px;
+     font-size: 1vw;
+     background-color: #F7F7EE;
+     cursor: pointer;
 }

@@ -1,32 +1,32 @@
-function loco(){
+function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".main"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".main"),
+        smooth: true
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy(".main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
-});
+    // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+        pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+    });
 
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
 
 }
 loco();
@@ -56,7 +56,7 @@ function loder() {
             delay: -0.3,
         })
 }
-loder();
+// loder();
 
 function textAnimation() {
     let h2Data = document.querySelectorAll(".page2 .text-content>h2");
@@ -88,57 +88,90 @@ function textAnimation() {
     // page3 textcontent2 animation
 
     let h2data = document.querySelectorAll(".page3 .text-content2 h2");
-h2data.forEach((elem)=>{
-    let splited = elem.textContent.split("");
-    let clutter = " ";
-    splited.forEach((e)=>{
-        clutter+=`<span>${e}</span>`;
-        // console.log(e);       
+    h2data.forEach((elem) => {
+        let splited = elem.textContent.split("");
+        let clutter = " ";
+        splited.forEach((e) => {
+            clutter += `<span>${e}</span>`;
+            // console.log(e);       
+        })
+        elem.innerHTML = clutter;
     })
-    elem.innerHTML = clutter;
-})
-gsap.to(".page3 .text-content2 h2 span",{
-       color:'#434B34',
-       stagger:0.3,
-      scrollTrigger:{
-        trigger:".page3 .text-content2",
-        scroller:".main",
-        // markers:true,
-        start:"top 50%",
-        end:"top 20%",
-        scrub:2,
-      }  
-})
+    gsap.to(".page3 .text-content2 h2 span", {
+        color: '#434B34',
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".page3 .text-content2",
+            scroller: ".main",
+            // markers:true,
+            start: "top 50%",
+            end: "top 20%",
+            scrub: 2,
+        }
+    })
+    // page6 page6-text animation
+    let h2Page6 = document.querySelectorAll(".page6 .page6-text>h2");
+     h2Page6.forEach((elem)=>{
+            let splited = elem.textContent.split("");
+            // let clutter = " ";
+            elem.innerHTML = " ";
+            splited.forEach((e)=>{
+                elem.innerHTML+=`<span>${e}</span>`;
+            })
+            //  elem.innerHTML = clutter;
+     })
+     gsap.to(".page6 .page6-text>h2 span", {
+        color: '#E3E3C4',
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".page6 .page6-text",
+            scroller: ".main",
+            // markers:true,
+            start: "top 50%",
+            end: "top 20%",
+            scrub: 2,
+        }
+    })
 }
 textAnimation();
 
-function svgscroll(){
-    gsap.to(".page2 #svg2,.page2 #svg3",{
-        left:"-100vw",
-        scrollTrigger:{
-            trigger:".page2 #svg2",
-            scroller:".main",
-            scrub:2,
+function svgscroll() {
+    gsap.to(".page2 #svg2,.page2 #svg3", {
+        left: "-100vw",
+        scrollTrigger: {
+            trigger: ".page2 #svg2",
+            scroller: ".main",
+            scrub: 2,
+            // markers:true,
+        }
+    })
+
+    //page6 SvgScroller 
+    gsap.to(".page6 #page6-svg1,.page6 #page6-svg2", {
+        left: "-10vw",
+        scrollTrigger: {
+            trigger: ".page6 #page6-svg1",
+            scroller: ".main",
+            scrub: 2,
             // markers:true,
         }
     })
 }
 svgscroll();
 
-function swipper()
-{
+function swipper() {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         spaceBetween: 30,
         pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
+            el: ".swiper-pagination",
+            type: "fraction",
         },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-          },
-      });
+        },
+    });
 }
 swipper();
 

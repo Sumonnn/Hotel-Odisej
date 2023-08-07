@@ -156,6 +156,30 @@ function textAnimation() {
             scrub: 2,
         }
     })
+
+    //page10 text animation
+
+    let h2page10 = document.querySelectorAll(".page10 .page10-text-content>h2");
+
+    h2page10.forEach((elem) => {
+        let splited = elem.textContent.split("");
+        elem.innerHTML = " ";
+        splited.forEach((e) => {
+            elem.innerHTML += `<span>${e}</span>`;
+        })
+    })
+    gsap.to(".page10 .page10-text-content h2 span", {
+        color: '#E3E3C4',
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".page10 .page10-text-content",
+            scroller: ".main",
+            // markers:true,
+            start: "top 50%",
+            end: "top 20%",
+            scrub: 2,
+        }
+    })
 }
 textAnimation();
 
@@ -185,6 +209,18 @@ function svgscroll() {
         right: "-20vw",
         scrollTrigger: {
             trigger: ".page6 #page6-svg3",
+            scroller: ".main",
+            scrub: 2,
+            // markers:true,
+        }
+    })
+    
+    //.page10 #page10-svg2
+
+    gsap.to(".page10 #page10-svg1,.page10 #page10-svg2", {
+        left: "-100vw",
+        scrollTrigger: {
+            trigger: ".page10 #page10-svg1",
             scroller: ".main",
             scrub: 2,
             // markers:true,

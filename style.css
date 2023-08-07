@@ -587,3 +587,120 @@ nav {
      background-color: #F7F7EE;
      cursor: pointer;
 }
+.page6 #page6-svg3{
+    width: 280vw;
+    position: absolute;
+    bottom: -11.5vw;
+    fill: #E3E3C4;    
+}
+.page6 #page6-svg4{
+    width: 300vw;
+    position: absolute;
+    bottom: -7vw;
+    fill: #03364F;
+}
+/* ----------------------page7------------------------------------- */
+.page7{
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F7F7EE;
+}
+.page7>h2{
+    color: #E3E3C4;
+    font-family: "pp woodland bold";
+    font-size: 3.5vw;
+    font-weight: 900;
+}
+.page7 h2 span{
+    color: #E3E3C4;
+}
+/* -------------------page8----------------------- */
+.page8{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #F7F7EE;
+}
+.page8 .page8-left{
+    height: 75%;
+    width: 110%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.page8 .page8-left>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page8 .page8-center{
+    width: 55%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+.page8 .page8-center>h2{
+    font-family: "pp woodland bold";
+    text-align: center;
+    font-size: 3vw;
+    color: #434B34;
+}
+.page8 .page8-center>p{
+    text-align: center;
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 0.8vw;
+    color: rgba(0, 0, 0, 0.683);
+}
+.page8 .page8-center>h4{
+    font-family: "gilroy";
+    font-size: 1.2vw;
+    color: #434B34;
+    margin-top: 5vw;
+}
+.page8 .page8-center h4 span i{
+    color: white;
+    padding: 0.2vw 1vw;
+    background-color: #434B34;
+    border-radius: 50px;
+    font-size: 1vw;
+}
+.page8 .page8-right{
+    height: 75%;
+    width: 110%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.page8 .page8-right>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* -----------------page9----------------------- */
+.page9{
+    width: 100%;
+    height: 110vh;
+    position: relative;
+}
+.page9>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* ----------------page10--------------------------- */
+.page10{
+    width: 100%;
+    min-height: 160vh;
+    
+}

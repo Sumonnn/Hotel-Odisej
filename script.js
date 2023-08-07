@@ -111,16 +111,16 @@ function textAnimation() {
     })
     // page6 page6-text animation
     let h2Page6 = document.querySelectorAll(".page6 .page6-text>h2");
-     h2Page6.forEach((elem)=>{
-            let splited = elem.textContent.split("");
-            // let clutter = " ";
-            elem.innerHTML = " ";
-            splited.forEach((e)=>{
-                elem.innerHTML+=`<span>${e}</span>`;
-            })
-            //  elem.innerHTML = clutter;
-     })
-     gsap.to(".page6 .page6-text>h2 span", {
+    h2Page6.forEach((elem) => {
+        let splited = elem.textContent.split("");
+        // let clutter = " ";
+        elem.innerHTML = " ";
+        splited.forEach((e) => {
+            elem.innerHTML += `<span>${e}</span>`;
+        })
+        //  elem.innerHTML = clutter;
+    })
+    gsap.to(".page6 .page6-text>h2 span", {
         color: '#E3E3C4',
         stagger: 0.3,
         scrollTrigger: {
@@ -129,6 +129,30 @@ function textAnimation() {
             // markers:true,
             start: "top 50%",
             end: "top 20%",
+            scrub: 2,
+        }
+    })
+
+    //page7 text animation
+
+    let h2page7 = document.querySelectorAll(".page7>h2");
+
+    h2page7.forEach((elem) => {
+        let splited = elem.textContent.split("");
+        elem.innerHTML = " ";
+        splited.forEach((e) => {
+            elem.innerHTML += `<span>${e}</span>`;
+        })
+    })
+    gsap.to(".page7 h2 span", {
+        color: '#434B34',
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".page7 ",
+            scroller: ".main",
+            // markers:true,
+            start: "top 50%",
+            end: "top -30%",
             scrub: 2,
         }
     })
@@ -146,11 +170,21 @@ function svgscroll() {
         }
     })
 
-    //page6 SvgScroller 
+    //page6 SvgScroller top
     gsap.to(".page6 #page6-svg1,.page6 #page6-svg2", {
         left: "-10vw",
         scrollTrigger: {
             trigger: ".page6 #page6-svg1",
+            scroller: ".main",
+            scrub: 2,
+            // markers:true,
+        }
+    })
+    //page6 SvgScroller bottom
+    gsap.to(".page6 #page6-svg3,.page6 #page6-svg4", {
+        right: "-20vw",
+        scrollTrigger: {
+            trigger: ".page6 #page6-svg3",
             scroller: ".main",
             scrub: 2,
             // markers:true,
@@ -175,4 +209,29 @@ function swipper() {
 }
 swipper();
 
-
+function page8Animationimg()
+{
+    
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page8",
+        scroller: ".main",
+        // markers: true,
+        start: "top 70%",
+        end: "top 30%",
+        scrub: 2,
+    }
+})
+tl.to(".page8 .page8-right", {
+    x: "15vw",
+}, 'a')
+tl.to(".page8 .page8-left", {
+    x: "-15vw",
+}, 'a')
+tl.from(".page8 .page8-center", {
+    transform: `translateY(2vw)`,
+    opacity:0,
+    delay:0.3,
+}, 'a')
+}
+page8Animationimg();

@@ -56,7 +56,7 @@ function loder() {
             delay: -0.3,
         })
 }
-// loder();
+loder();
 
 function textAnimation() {
     let h2Data = document.querySelectorAll(".page2 .text-content>h2");

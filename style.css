@@ -1029,3 +1029,51 @@ nav {
     object-fit: cover;
     object-position: center;
 }
+/* -------------------------page12----------------------------- */
+.page12{
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    background-image: url(./assets/page9-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.page12 .page12-box{
+    width: 90%;
+    height: 25vh;
+    border-radius: 15px;
+    margin-left: 5vw;
+    position: absolute;
+    bottom: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25vw;
+    background-color: #5b6647ef;
+}
+.page12 .page12-box>h2{
+    font-family: "pp woodland bold";
+    font-size: 2.8vw;
+    color: #E3E3C4;
+}
+.page12 .page12-box>p{
+    color: white;
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 1.3vw;
+}
+.page12 .page12-box p span i{
+    padding: 0.1vw 0.9vw;
+    background-color: white;
+    color: #434b34;
+    border-radius: 50px;
+    margin-left: 1vw;
+    font-size: 1vw;
+}
+/* --------------------footer--------------------------- */
+footer{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background-color: #03364F;
+}

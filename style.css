@@ -880,6 +880,152 @@ nav {
 /* -----------------------page11--------------------------------- */
 .page11{
     width: 100%;
-    min-height: 190vh;
+    min-height: 210vh;
     background-color: #F7F7EE;
+}
+.page11 .page11-top{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.8vw;
+}
+.page11 .page11-top>h2{
+    font-family: "pp woodland bold";
+    font-size: 3.8vw;
+    color: #434B34;
+    font-weight: 100;
+    line-height: 4vw;
+}
+.page11 .page11-top>p{
+    width: 19%;
+    text-align: center;
+    font-family: "gilroy";
+    color: #5B6647;
+    font-weight: 600;
+    font-size: 0.8vw;
+}
+.page11 .page11-center{
+    width: 90%;
+    height: 95vh;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page11 .page11-center .page11-center-img{
+    width: 40%;
+    height: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.page11 .page11-center .page11-center-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page11 .page11-center .page11-center-text{
+    width: 41.5%;
+    height: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5vw;    
+}
+.page11 .page11-center .page11-center-text>h2{
+    font-family: "pp woodland bold";
+    color: #434B34;
+    font-size: 1.8vw;
+}
+.page11 .page11-center .page11-center-text>p{
+    width: 45%;
+    font-family: "gilroy";
+    font-size: 0.8vw;
+    font-weight: 600;
+    color: #5B6647;
+}
+.page11 .page11-center .page11-center-text>h4{
+    font-family: "gilroy";
+    font-size: 1.2vw;
+    color: #434b34;
+    margin-top: 2vw;
+    font-weight: 600;
+}
+.page11 .page11-center .page11-center-text h4 span i{
+    color: white;
+    padding: 0.2vw 0.9vw;
+    background-color: #4f593e;
+    border-radius: 50px;
+    font-size: 1vw;
+    margin-left: 0.5vw;
+}
+.page11 .page11-bottom{
+    width: 90%;
+    margin-left: 5vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.page11 .page11-bottom .page11-bottom-text{
+    width: 40%;
+    height: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5vw;    
+}  
+.page11 .page11-bottom .page11-bottom-text .page11-bottom-text-mini{
+    width: 53%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5vw;
+} 
+ .page11 .page11-bottom .page11-bottom-text .page11-bottom-text-mini>h2{
+    font-size: 1.8vw;
+    font-family: "pp woodland bold";
+    color: #434b34;
+}
+.page11 .page11-bottom .page11-bottom-text .page11-bottom-text-mini>p{
+    width: 90%;
+    font-size: 0.8vw;
+    color: #5B6647;
+    font-family: "gilroy";
+    font-weight: 600;
+}
+.page11 .page11-bottom .page11-bottom-text .page11-bottom-text-mini h4{
+    font-family: "gilroy";
+    color: #434b34;
+    font-size: 1.2vw;
+    margin-top: 2vw;
+}
+.page11 .page11-bottom .page11-bottom-text .page11-bottom-text-mini h4 span i{
+    padding: 0.1vw 0.9vw;
+    background-color: #434b34;
+    color: white;
+    border-radius: 50px;
+} 
+
+.page11 .page11-bottom .page11-bottom-img{
+    width: 41.5%;
+    height: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.page11 .page11-bottom .page11-bottom-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }

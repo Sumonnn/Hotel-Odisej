@@ -28,13 +28,43 @@ function loco() {
     // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
 
+    locoScroll.on("scroll", (dets) => {
+        if (dets.scroll.y > 400) {
+            gsap.to("nav", {
+                backgroundColor: '#F7F7EE',
+                borderBottom: '1px solid #434B34',
+            })
+        } else if (dets.scroll.y < 400) {
+            gsap.to("nav", {
+                backgroundColor: 'transparent',
+                borderBottom: '1px solid transparent',
+            })
+
+        }
+    })
+
+    document.addEventListener("wheel", (dets) => {
+        if (dets.offsetY > 650) {
+            if (dets.deltaY > 0) {
+                gsap.to("nav", {
+                    top: '-12vh',
+                })
+            }
+        }
+        else if (dets.deltaY < 0) {
+            gsap.to("nav", {
+                top: '0vh',
+            })
+        }
+    })
+
 }
 loco();
 
 function loder() {
     let tl = gsap.timeline();
     tl
-        .from(".page1>svg", {
+        .from("nav>svg", {
             opacity: 0,
             y: -100,
             duration: 0.7,
@@ -49,7 +79,7 @@ function loder() {
 
         })
 
-        .from("nav", {
+        .from(".nav-part1,.nav-part2", {
             opacity: 0,
             duration: 0.5,
             // y: -100,
@@ -214,7 +244,7 @@ function svgscroll() {
             // markers:true,
         }
     })
-    
+
     //.page10 #page10-svg2
 
     gsap.to(".page10 #page10-svg1,.page10 #page10-svg2", {
@@ -245,29 +275,45 @@ function swipper() {
 }
 swipper();
 
-function page8Animationimg()
-{
-    
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".page8",
-        scroller: ".main",
-        // markers: true,
-        start: "top 70%",
-        end: "top 30%",
-        scrub: 2,
-    }
-})
-tl.to(".page8 .page8-right", {
-    x: "15vw",
-}, 'a')
-tl.to(".page8 .page8-left", {
-    x: "-15vw",
-}, 'a')
-tl.from(".page8 .page8-center", {
-    transform: `translateY(2vw)`,
-    opacity:0,
-    delay:0.3,
-}, 'a')
+function page8Animationimg() {
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".page8",
+            scroller: ".main",
+            // markers: true,
+            start: "top 70%",
+            end: "top 30%",
+            scrub: 2,
+        }
+    })
+    tl.to(".page8 .page8-right", {
+        x: "15vw",
+    }, 'a')
+    tl.to(".page8 .page8-left", {
+        x: "-15vw",
+    }, 'a')
+    tl.from(".page8 .page8-center", {
+        transform: `translateY(2vw)`,
+        opacity: 0,
+        delay: 0.3,
+    }, 'a')
 }
 page8Animationimg();
+
+function navsvgfn() {
+    gsap.to("nav>svg", {
+        top: '-180%',
+        scale: 0.10,
+        scrollTrigger: {
+            trigger: ".page1",
+            scroller: ".main",
+            // markers: true,
+            start: "top -1%",
+            end: "top -8%",
+            scrub: 1,
+
+        }
+    })
+}
+navsvgfn();

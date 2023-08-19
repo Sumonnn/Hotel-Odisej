@@ -1075,3 +1075,170 @@ footer{
     position: relative;
     background-color: #03364F;
 }
+footer .footer-elem{
+    width: 90%;
+    margin-left: 5%;
+}
+footer .footer-elem>p{
+    color: white;
+    font-family: "gilroy";
+    margin-bottom: 1vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+footer .footer-elem1{
+    height: 32vh; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+footer .footer-elem2{
+    height: 25vh;
+    border-top: 0.5px solid #045781;
+    border-bottom: 0.5px solid #045781;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+footer .footer-elem3{
+    height: 21vh;
+}
+.footer-elem3-top{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    gap: 37.5vw;
+}
+.footer-elem3-top>p{
+    color: white;
+    font-family: "gilroy";
+    margin-top: 1vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+.footer-elem3-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.footer-elem3-bottom>h5{
+    color: wheat;
+    font-family: "gilroy";
+}
+
+/* -----------------------------------media sectar------------------------------------------------------- */
+
+@media (max-width:600px) {
+    /* navbar */
+    nav {
+        width: 100%;
+        height: 10vh;
+        padding: 0 20px;
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-part1 {
+        width: 40px;
+        height: 10px;
+    }
+    
+    .nav-part1 .line {
+        width: 100%;
+        height: 2px;
+        margin-bottom: 4px;
+        background-color: #434B34;
+    }
+    nav svg {
+        scale: 0.20;
+        position: absolute;
+        top: -30%;
+        z-index: 9;
+        fill: #434B34;
+    }
+    .nav-part2 button {
+        padding: 6px 16px;
+        border-radius: 50px;
+        margin-right: 5px;
+        font-size: 16px;
+        background-color: transparent;
+        cursor: pointer;
+        color: #434B34;
+        display: none;
+        border: 1px solid #434b34d2;
+    }
+    
+    .nav-part2 button:nth-last-child(1) {
+        background-color: #434b34de;
+        color: white;
+        display: block;
+    }
+
+    /* ------------------p1---------------------------- */
+    .page1 {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .page1>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    /* -----------------p2-------------------------- */
+    .page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        background-color: #5B6647;
+    }
+    
+    .page2 #svg1 {
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+    }
+    
+    .page2 .text-content {
+        position: relative;
+        padding-top: 25vw;
+        z-index: 99;
+    }
+    
+    .page2 .text-content>h2 {
+        text-align: center;
+        font-size: 9vw;
+        line-height: 11vw;
+        color: #434B34;
+        font-family: "pp woodland";
+    }
+    
+    .page2 .text-content>h2 span {
+        font-family: "pp woodland";
+    }
+    
+    .page2 #svg2 {
+        position: absolute;
+        bottom: -5%;
+        width: 280vw;
+        fill: #5B6647;
+        z-index: 9;
+    }
+    
+    .page2 #svg3 {
+        position: absolute;
+        bottom: -5%;
+        width: 270vw;
+        fill: #E3E3C4;
+        left: -35%;
+    }
+    /* ----------------p3----------------------------- */
+    
+}

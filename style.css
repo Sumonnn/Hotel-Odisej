@@ -1886,7 +1886,7 @@ footer .footer-elem3{
         border-radius: 50px;
         position: absolute;
         top: 10.3%;
-        right: 5%;
+        right: 2%;
         z-index: 9;
     }
     
@@ -1898,7 +1898,7 @@ footer .footer-elem3{
         border-radius: 50px;
         position: absolute;
         top: 10.3%;
-        left: 78%;
+        left: 76%;
         z-index: 9;
     }
     
@@ -2139,10 +2139,12 @@ footer .footer-elem3{
         font-family: "pp woodland bold";
         font-size: 8.8vw;
         font-weight: 900;
+        text-align: center;
     }
     
     .page7 h2 span {
         color: #E3E3C4;
+        text-align: center;
     }
 
     /* ------------------p8------------------------------ */
